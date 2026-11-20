@@ -1,3 +1,4 @@
+
 import streamlit as st
 import math
 import re
@@ -66,8 +67,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$x^2 + y^2 = z^2$",
                 "answer_val": -3.0,
-                "answer_disp": r"$-3\text{ ft/s}$",
-                "hint": r"At $x = 6$ and $z = 10$, $y = 8$. Differentiate: $2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0$."
+                "answer_disp": r"$-3\text{ ft/s}$"
             },
             {
                 "title": "Lock 2: Particle on an Implicit Curve",
@@ -78,8 +78,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"Product Rule: $\frac{d}{dt}(xy) = x\frac{dy}{dt} + y\frac{dx}{dt}$",
                 "answer_val": 2.5,
-                "answer_disp": r"$\frac{5}{2}$ or $2.5\text{ units/s}$",
-                "hint": r"Differentiate with respect to $t$: $2x\frac{dx}{dt} + x\frac{dy}{dt} + y\frac{dx}{dt} + 2y\frac{dy}{dt} = 0$."
+                "answer_disp": r"$\frac{5}{2}$ or $2.5\text{ units/s}$"
             },
             {
                 "title": "Lock 3: Expanding Circular Spill",
@@ -90,8 +89,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$A = \pi r^2$",
                 "answer_val": 60.0 * math.pi,
-                "answer_disp": r"$60\pi\text{ m}^2/\text{s}$ ($\approx 188.50$)",
-                "hint": r"$\frac{dA}{dt} = 2\pi r \frac{dr}{dt}$. You may enter `60pi` or `188.5`."
+                "answer_disp": r"$60\pi\text{ m}^2/\text{s}$ ($\approx 188.50$)"
             },
             {
                 "title": "Lock 4: Expanding Cube",
@@ -101,8 +99,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$V = s^3$",
                 "answer_val": 96.0,
-                "answer_disp": r"$96\text{ cm}^3/\text{s}$",
-                "hint": r"First solve $s^3 = 64$ to find the edge length $s$, then use $\frac{dV}{dt} = 3s^2 \frac{ds}{dt}$."
+                "answer_disp": r"$96\text{ cm}^3/\text{s}$"
             },
             {
                 "title": "Lock 5: Cylindrical Water Tank",
@@ -113,8 +110,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$V = \pi r^2 h$",
                 "answer_val": 2.0,
-                "answer_disp": r"$2\text{ m/min}$",
-                "hint": r"Since the radius $r = 4$ is constant, $V = 16\pi h$, so $\frac{dV}{dt} = 16\pi \frac{dh}{dt}$."
+                "answer_disp": r"$2\text{ m/min}$"
             },
             {
                 "title": "Lock 6: Spherical Balloon (Final Lock)",
@@ -125,8 +121,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$S = 4\pi r^2$ and $V = \frac{4}{3}\pi r^3$",
                 "answer_val": 60.0 * math.pi,
-                "answer_disp": r"$60\pi\text{ cm}^3/\text{s}$ ($\approx 188.50$)",
-                "hint": r"Use $S = 100\pi$ to find $r = 5$, use $\frac{dS}{dt} = 8\pi r \frac{dr}{dt}$ to find $\frac{dr}{dt}$, then substitute into $\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}$."
+                "answer_disp": r"$60\pi\text{ cm}^3/\text{s}$ ($\approx 188.50$)"
             }
         ]
     },
@@ -144,8 +139,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$x^2 + y^2 = z^2$",
                 "answer_val": -1.5,
-                "answer_disp": r"$-\frac{3}{2}$ or $-1.5\text{ ft/s}$",
-                "hint": r"At $x = 9$ and $z = 15$, $y = 12$. Differentiate: $2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0$."
+                "answer_disp": r"$-\frac{3}{2}$ or $-1.5\text{ ft/s}$"
             },
             {
                 "title": "Lock 2: Particle on an Implicit Curve",
@@ -156,8 +150,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"Product Rule: $\frac{d}{dt}(xy) = x\frac{dy}{dt} + y\frac{dx}{dt}$",
                 "answer_val": 7.0,
-                "answer_disp": r"$7\text{ units/s}$",
-                "hint": r"Differentiate with respect to $t$: $3x^2\frac{dx}{dt} + x\frac{dy}{dt} + y\frac{dx}{dt} - 2y\frac{dy}{dt} = 0$."
+                "answer_disp": r"$7\text{ units/s}$"
             },
             {
                 "title": "Lock 3: Circular Water Ripple",
@@ -168,8 +161,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$A = \pi r^2$",
                 "answer_val": 48.0 * math.pi,
-                "answer_disp": r"$48\pi\text{ cm}^2/\text{s}$ ($\approx 150.80$)",
-                "hint": r"$\frac{dA}{dt} = 2\pi r \frac{dr}{dt}$. You may enter `48pi` or `150.8`."
+                "answer_disp": r"$48\pi\text{ cm}^2/\text{s}$ ($\approx 150.80$)"
             },
             {
                 "title": "Lock 4: Morphing Rectangle",
@@ -180,8 +172,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$A = l \cdot w$",
                 "answer_val": 26.0,
-                "answer_disp": r"$26\text{ cm}^2/\text{s}$",
-                "hint": r"Apply the Product Rule: $\frac{dA}{dt} = l\frac{dw}{dt} + w\frac{dl}{dt}$."
+                "answer_disp": r"$26\text{ cm}^2/\text{s}$"
             },
             {
                 "title": "Lock 5: Draining Cylindrical Drum",
@@ -192,8 +183,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$V = \pi r^2 h$",
                 "answer_val": -2.0,
-                "answer_disp": r"$-2\text{ ft/min}$",
-                "hint": r"Since $r = 3$ is constant, $V = 9\pi h$, so $-18\pi = 9\pi \frac{dh}{dt}$."
+                "answer_disp": r"$-2\text{ ft/min}$"
             },
             {
                 "title": "Lock 6: Spherical Balloon (Final Lock)",
@@ -204,8 +194,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$S = 4\pi r^2$ and $V = \frac{4}{3}\pi r^3$",
                 "answer_val": 24.0 * math.pi,
-                "answer_disp": r"$24\pi\text{ cm}^3/\text{s}$ ($\approx 75.40$)",
-                "hint": r"Use $S = 64\pi$ to find $r = 4$, use $\frac{dS}{dt} = 8\pi r \frac{dr}{dt}$ to find $\frac{dr}{dt}$, then substitute into $\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}$."
+                "answer_disp": r"$24\pi\text{ cm}^3/\text{s}$ ($\approx 75.40$)"
             }
         ]
     },
@@ -223,8 +212,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$x^2 + y^2 = z^2$",
                 "answer_val": -1.75,
-                "answer_disp": r"$-\frac{7}{4}$ or $-1.75\text{ ft/s}$",
-                "hint": r"At $x = 7$ and $z = 25$, $y = 24$. Differentiate: $2x\frac{dx}{dt} + 2y\frac{dy}{dt} = 0$."
+                "answer_disp": r"$-\frac{7}{4}$ or $-1.75\text{ ft/s}$"
             },
             {
                 "title": "Lock 2: Particle on an Implicit Curve",
@@ -235,8 +223,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"Product Rule: $\frac{d}{dt}(xy) = x\frac{dy}{dt} + y\frac{dx}{dt}$",
                 "answer_val": 14.0,
-                "answer_disp": r"$14\text{ units/s}$",
-                "hint": r"Differentiate carefully: $4x\frac{dx}{dt} - \left(x\frac{dy}{dt} + y\frac{dx}{dt}\right) + 3y^2\frac{dy}{dt} = 0$."
+                "answer_disp": r"$14\text{ units/s}$"
             },
             {
                 "title": "Lock 3: Expanding Metal Disc",
@@ -247,8 +234,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$A = \pi r^2$",
                 "answer_val": 20.0 * math.pi,
-                "answer_disp": r"$20\pi\text{ mm}^2/\text{s}$ ($\approx 62.83$)",
-                "hint": r"$\frac{dA}{dt} = 2\pi r \frac{dr}{dt}$. You may enter `20pi` or `62.83`."
+                "answer_disp": r"$20\pi\text{ mm}^2/\text{s}$ ($\approx 62.83$)"
             },
             {
                 "title": "Lock 4: Expanding Cube",
@@ -259,8 +245,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$V = s^3$ and $S = 6s^2$",
                 "answer_val": 225.0,
-                "answer_disp": r"$225\text{ in}^3/\text{s}$",
-                "hint": r"First solve $6s^2 = 150$ to find $s = 5$, then substitute into $\frac{dV}{dt} = 3s^2 \frac{ds}{dt}$."
+                "answer_disp": r"$225\text{ in}^3/\text{s}$"
             },
             {
                 "title": "Lock 5: Cylindrical Vat",
@@ -271,8 +256,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$V = \pi r^2 h$",
                 "answer_val": 1.5,
-                "answer_disp": r"$\frac{3}{2}$ or $1.5\text{ m/min}$",
-                "hint": r"Since $r = 6$ is constant, $V = 36\pi h$, so $54\pi = 36\pi \frac{dh}{dt}$."
+                "answer_disp": r"$\frac{3}{2}$ or $1.5\text{ m/min}$"
             },
             {
                 "title": "Lock 6: Melting Snowball (Final Lock)",
@@ -283,8 +267,7 @@ VAULT_VERSIONS = {
                 ),
                 "formula": r"$S = 4\pi r^2$ and $V = \frac{4}{3}\pi r^3$",
                 "answer_val": -49.0 * math.pi,
-                "answer_disp": r"$-49\pi\text{ cm}^3/\text{min}$ ($\approx -153.94$)",
-                "hint": r"Use $S = 196\pi$ to find $r = 7$, use $\frac{dS}{dt} = 8\pi r \frac{dr}{dt}$ to find $\frac{dr}{dt}$, then substitute into $\frac{dV}{dt} = 4\pi r^2 \frac{dr}{dt}$."
+                "answer_disp": r"$-49\pi\text{ cm}^3/\text{min}$ ($\approx -153.94$)"
             }
         ]
     }
@@ -354,7 +337,7 @@ for idx, lock in enumerate(v_data["locks"]):
                 f"**Vault Digit #{idx + 1} Revealed:** **`{passcode_digits[idx]}`**"
             )
         else:
-            in_col, btn_col, hint_col = st.columns([2, 1, 1])
+            in_col, btn_col = st.columns([3, 1])
             with in_col:
                 user_raw = st.text_input(
                     f"Enter your answer for Lock {idx + 1}:",
@@ -365,13 +348,6 @@ for idx, lock in enumerate(v_data["locks"]):
                 st.write("")
                 st.write("")
                 check_clicked = st.button("Check Answer", key=f"btn_{selected_version}_{idx}", use_container_width=True)
-            with hint_col:
-                st.write("")
-                st.write("")
-                show_hint = st.checkbox("Show Hint", key=f"hint_{selected_version}_{idx}")
-
-            if show_hint:
-                st.warning(f"💡 **Hint:** {lock['hint']}")
 
             if check_clicked:
                 parsed = parse_math_answer(user_raw)
